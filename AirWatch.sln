@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirWatch.Domain", "AirWatch.Domain\AirWatch.Domain.csproj", "{B7FC577E-0391-4380-BFE0-B07E0956A39A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirWatch.Application", "AirWatch.Application\AirWatch.Application.csproj", "{4095388E-4736-4327-9027-3BC9520CA61B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirWatch.Infrastructure", "AirWatch.Infrastructure\AirWatch.Infrastructure.csproj", "{E42CD5F2-4AB7-430E-93D7-0CDFBE0986D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirWatch.API", "AirWatch.API\AirWatch.API.csproj", "{5A52B9E7-AFDF-4A37-A668-685892F62072}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7FC577E-0391-4380-BFE0-B07E0956A39A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7FC577E-0391-4380-BFE0-B07E0956A39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7FC577E-0391-4380-BFE0-B07E0956A39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7FC577E-0391-4380-BFE0-B07E0956A39A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4095388E-4736-4327-9027-3BC9520CA61B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4095388E-4736-4327-9027-3BC9520CA61B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4095388E-4736-4327-9027-3BC9520CA61B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4095388E-4736-4327-9027-3BC9520CA61B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E42CD5F2-4AB7-430E-93D7-0CDFBE0986D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E42CD5F2-4AB7-430E-93D7-0CDFBE0986D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E42CD5F2-4AB7-430E-93D7-0CDFBE0986D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E42CD5F2-4AB7-430E-93D7-0CDFBE0986D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A52B9E7-AFDF-4A37-A668-685892F62072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A52B9E7-AFDF-4A37-A668-685892F62072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A52B9E7-AFDF-4A37-A668-685892F62072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A52B9E7-AFDF-4A37-A668-685892F62072}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
