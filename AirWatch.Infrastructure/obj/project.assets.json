@@ -46,6 +46,19 @@
           }
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1540,6 +1553,37 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "sha512": "W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.0.3.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net20/BCrypt.Net-Next.dll",
+        "lib/net20/BCrypt.Net-Next.xml",
+        "lib/net35/BCrypt.Net-Next.dll",
+        "lib/net35/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt.Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt.Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt.Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/net5.0/BCrypt.Net-Next.dll",
+        "lib/net5.0/BCrypt.Net-Next.xml",
+        "lib/net6.0/BCrypt.Net-Next.dll",
+        "lib/net6.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt.Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt.Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -4044,25 +4088,26 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AirWatch.Application >= 1.0.0",
+      "BCrypt.Net-Next >= 4.0.3",
       "Microsoft.EntityFrameworkCore >= 8.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\levi.santos\\.nuget\\packages\\": {}
+    "C:\\Users\\vitor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\AirWatch-dotnet\\AirWatch.Infrastructure\\AirWatch.Infrastructure.csproj",
+      "projectUniqueName": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Infrastructure\\AirWatch.Infrastructure.csproj",
       "projectName": "AirWatch.Infrastructure",
-      "projectPath": "C:\\AirWatch-dotnet\\AirWatch.Infrastructure\\AirWatch.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\levi.santos\\.nuget\\packages\\",
-      "outputPath": "C:\\AirWatch-dotnet\\AirWatch.Infrastructure\\obj\\",
+      "projectPath": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Infrastructure\\AirWatch.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
+      "outputPath": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\levi.santos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4074,8 +4119,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\AirWatch-dotnet\\AirWatch.Application\\AirWatch.Application.csproj": {
-              "projectPath": "C:\\AirWatch-dotnet\\AirWatch.Application\\AirWatch.Application.csproj"
+            "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Application\\AirWatch.Application.csproj": {
+              "projectPath": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Application\\AirWatch.Application.csproj"
             }
           }
         }
@@ -4096,6 +4141,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "BCrypt.Net-Next": {
+            "target": "Package",
+            "version": "[4.0.3, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.0, )"
@@ -4125,15 +4174,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
+            "version": "[8.0.25, 8.0.25]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
+            "version": "[8.0.25, 8.0.25]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
+            "version": "[8.0.25, 8.0.25]"
           }
         ],
         "frameworkReferences": {
@@ -4141,7 +4190,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\levi.santos\\.dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

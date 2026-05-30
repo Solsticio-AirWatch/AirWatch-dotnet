@@ -1613,6 +1613,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AirWatch.Application": "1.0.0",
+          "BCrypt.Net-Next": "4.0.3",
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
         },
@@ -4535,19 +4536,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\levi.santos\\.nuget\\packages\\": {}
+    "C:\\Users\\vitor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\AirWatch-dotnet\\AirWatch.API\\AirWatch.API.csproj",
+      "projectUniqueName": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.API\\AirWatch.API.csproj",
       "projectName": "AirWatch.API",
-      "projectPath": "C:\\AirWatch-dotnet\\AirWatch.API\\AirWatch.API.csproj",
-      "packagesPath": "C:\\Users\\levi.santos\\.nuget\\packages\\",
-      "outputPath": "C:\\AirWatch-dotnet\\AirWatch.API\\obj\\",
+      "projectPath": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.API\\AirWatch.API.csproj",
+      "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
+      "outputPath": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\levi.santos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4559,11 +4560,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\AirWatch-dotnet\\AirWatch.Application\\AirWatch.Application.csproj": {
-              "projectPath": "C:\\AirWatch-dotnet\\AirWatch.Application\\AirWatch.Application.csproj"
+            "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Application\\AirWatch.Application.csproj": {
+              "projectPath": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Application\\AirWatch.Application.csproj"
             },
-            "C:\\AirWatch-dotnet\\AirWatch.Infrastructure\\AirWatch.Infrastructure.csproj": {
-              "projectPath": "C:\\AirWatch-dotnet\\AirWatch.Infrastructure\\AirWatch.Infrastructure.csproj"
+            "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Infrastructure\\AirWatch.Infrastructure.csproj": {
+              "projectPath": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Infrastructure\\AirWatch.Infrastructure.csproj"
             }
           }
         }
@@ -4617,19 +4618,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
+            "version": "[8.0.25, 8.0.25]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.26, 8.0.26]"
+            "version": "[8.0.25, 8.0.25]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
+            "version": "[8.0.25, 8.0.25]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
+            "version": "[8.0.25, 8.0.25]"
           }
         ],
         "frameworkReferences": {
@@ -4640,7 +4641,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\levi.santos\\.dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\AirWatch-dotnet\\AirWatch.Domain\\AirWatch.Domain.csproj": {}
+    "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Domain\\AirWatch.Domain.csproj": {}
   },
   "projects": {
-    "C:\\AirWatch-dotnet\\AirWatch.Domain\\AirWatch.Domain.csproj": {
+    "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Domain\\AirWatch.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\AirWatch-dotnet\\AirWatch.Domain\\AirWatch.Domain.csproj",
+        "projectUniqueName": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Domain\\AirWatch.Domain.csproj",
         "projectName": "AirWatch.Domain",
-        "projectPath": "C:\\AirWatch-dotnet\\AirWatch.Domain\\AirWatch.Domain.csproj",
-        "packagesPath": "C:\\Users\\levi.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\AirWatch-dotnet\\AirWatch.Domain\\obj\\",
+        "projectPath": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Domain\\AirWatch.Domain.csproj",
+        "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
+        "outputPath": "C:\\AirWatch-GS-Sprint1\\AirWatch-dotnet\\AirWatch.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\levi.santos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -57,15 +57,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.25, 8.0.25]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.25, 8.0.25]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.25, 8.0.25]"
             }
           ],
           "frameworkReferences": {
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\levi.santos\\.dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
