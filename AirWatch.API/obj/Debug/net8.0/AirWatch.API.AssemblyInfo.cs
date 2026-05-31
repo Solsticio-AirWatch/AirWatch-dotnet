@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("efc1c734-0e67-4ce2-83a0-bcb50b3339c8")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("AirWatch.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd8774a499a5261d4f424ec0aa46942791b1c3f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3077f4543bf0551ebabc81c45b98307155a63010")]
 [assembly: System.Reflection.AssemblyProductAttribute("AirWatch.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AirWatch.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

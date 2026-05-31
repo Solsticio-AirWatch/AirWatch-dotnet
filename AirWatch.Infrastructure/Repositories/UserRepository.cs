@@ -31,8 +31,7 @@ public class UserRepository :  IUserRepository
 
     public UserResponse Create(UserRequest request)
     {
-        var hash = BCrypt.Net.BCrypt.HashPassword(request.Password);
-        var user = request.ToDomain(hash);
+        var user = request.ToDomain();
         _ctx.Users.Add(user);
         _ctx.SaveChanges();
         var created = _ctx.Users.Include(u => u.City).First(u => u.Id == user.Id);

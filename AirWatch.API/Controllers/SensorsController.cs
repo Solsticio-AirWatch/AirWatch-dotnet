@@ -1,6 +1,54 @@
-﻿namespace AirWatch.API.Controllers;
+﻿using AirWatch.Application.DTOs;
+using AirWatch.Application.Services;
+using Microsoft.AspNetCore.Mvc;
 
-public class SensorsController
+namespace AirWatch.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class SensorsController : ControllerBase
 {
-    
+    private readonly ISensorRepository _repo;
+    private readonly ICityRepository _cityRepo;
+    public SensorsController(ISensorRepository repo, ICityRepository cityRepo)
+    { _repo = repo; _cityRepo = cityRepo; }
+
+    [HttpGet]
+    public IActionResult GetAll() => Ok(_repo.GetAll());
+
+    [HttpGet("{id:guid}")]
+    public IActionResult GetById(Guid id)
+    {
+        if (!_repo.ExistsById(id)) return NotFound();
+        return Ok(_repo.GetById(id));
+    }
+
+    [HttpGet("by-city/{cityId:guid}")]
+    public IActionResult GetByCity(Guid cityId) => Ok(_repo.GetByCityId(cityId));
+
+    [HttpPost]
+    public IActionResult Create([FromBody] SensorRequest request)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        if (!_cityRepo.ExistsById(request.CityId))
+            return NotFound(new { message = "Cidade não encontrada." });
+        var created = _repo.Create(request);
+        return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+    }
+
+    [HttpPut("{id:guid}")]
+    public IActionResult Update(Guid id, [FromBody] SensorRequest request)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        if (!_repo.ExistsById(id)) return NotFound();
+        return Ok(_repo.Update(id, request));
+    }
+
+    [HttpDelete("{id:guid}")]
+    public IActionResult Delete(Guid id)
+    {
+        if (!_repo.ExistsById(id)) return NotFound();
+        _repo.Delete(id);
+        return NoContent();
+    }
 }
