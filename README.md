@@ -10,7 +10,7 @@
 
 | Recurso | URL |
 |---|---|
-| **Repositório GitHub** | [https://github.com/Solsticio-AirWatch/AirWatch-Java_Back_End](https://github.com/Solsticio-AirWatch/AirWatch-dotnet.git) |
+| **Repositório GitHub** | https://github.com/Solsticio-AirWatch/AirWatch-dotnet.git |
 | **Vídeo de Apresentação** | |
 | **Vídeo Pitch** |  https://youtu.be/VETzkKojZaA?si=BLVaojFXzyI3AQso
 
