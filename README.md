@@ -6,6 +6,14 @@
 - Felipe Modesto — RM: 561810
 ---
 
+## 🔗 Links do Projeto
+
+| Recurso | URL |
+|---|---|
+| **Repositório GitHub** | [https://github.com/Solsticio-AirWatch/AirWatch-Java_Back_End](https://github.com/Solsticio-AirWatch/AirWatch-dotnet.git) |
+| **Vídeo de Apresentação** | |
+| **Vídeo Pitch** |  https://youtu.be/VETzkKojZaA?si=BLVaojFXzyI3AQso
+
 ## Domínio do Projeto
 
 O domínio escolhido para o projeto foi **Monitoramento de Qualidade do Ar**.
