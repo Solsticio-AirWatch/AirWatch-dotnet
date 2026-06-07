@@ -31,15 +31,35 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{ 
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "AirWatch API v1");
+    c.RoutePrefix = string.Empty;
+});
+
+app.UseExceptionHandler(appErr =>
+{
+    appErr.Run(async context =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "AirWatch API v1");
-        c.RoutePrefix = string.Empty;
+        var feature = context.Features
+            .Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerFeature>();
+
+        if (feature?.Error is InvalidOperationException domainEx)
+        {
+            context.Response.StatusCode = 400;
+            context.Response.ContentType = "application/json";
+            await context.Response.WriteAsJsonAsync(new { message = domainEx.Message });
+        }
+        else
+        {
+            context.Response.StatusCode = 500;
+            context.Response.ContentType = "application/json";
+            await context.Response.WriteAsJsonAsync(
+                new { message = "Ocorreu um erro interno. Tente novamente." });
+        }
     });
-}
+});
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

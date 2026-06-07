@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AirWatch.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8ca1bd0d05740bf8ec98320199179a6c9a761e4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdce9cea7a2516f3a1b9a3f8ac418983ab3a5ff5")]
 [assembly: System.Reflection.AssemblyProductAttribute("AirWatch.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AirWatch.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

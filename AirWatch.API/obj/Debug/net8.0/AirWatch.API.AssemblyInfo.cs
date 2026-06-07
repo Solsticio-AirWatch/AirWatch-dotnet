@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AirWatch.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b94838414cd7ccb80fddbe0c106961561762cc4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdce9cea7a2516f3a1b9a3f8ac418983ab3a5ff5")]
 [assembly: System.Reflection.AssemblyProductAttribute("AirWatch.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AirWatch.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 ﻿using AirWatch.Application.DTOs;
 using AirWatch.Application.Services;
+using AirWatch.Domain.Entities;
 using AirWatch.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -31,7 +32,14 @@ public class UserRepository :  IUserRepository
 
     public UserResponse Create(UserRequest request)
     {
-        var user = request.ToDomain();
+        var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
+
+        var user = new User(
+            request.CityId, request.Name, request.Email,
+            passwordHash, 
+            request.Role, request.Phone, request.IsActive,
+            request.NotifyEmail, request.NotifyPush);
+
         _ctx.Users.Add(user);
         _ctx.SaveChanges();
         var created = _ctx.Users.Include(u => u.City).First(u => u.Id == user.Id);
@@ -41,6 +49,13 @@ public class UserRepository :  IUserRepository
     public UserResponse Update(Guid id, UserRequest request)
     {
         var user = _ctx.Users.Include(u => u.City).First(u => u.Id == id);
+
+        if (!string.IsNullOrWhiteSpace(request.Password))
+        {
+            var newHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
+            user.UpdatePassword(newHash);
+        }
+
         user.Update(request.CityId, request.Name, request.Email, request.Role,
             request.Phone, request.IsActive, request.NotifyEmail, request.NotifyPush);
         _ctx.SaveChanges();

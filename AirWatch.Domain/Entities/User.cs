@@ -59,4 +59,11 @@ public class User : BaseEntity
         NotifyEmail = notifyEmail;
         NotifyPush = notifyPush;
     }  
+    
+    public void UpdatePassword(string newPasswordHash)
+    {
+        if (string.IsNullOrWhiteSpace(newPasswordHash))
+            throw new InvalidOperationException("O hash da senha não pode ser vazio.");
+        PasswordHash = newPasswordHash;
+    }
 }
