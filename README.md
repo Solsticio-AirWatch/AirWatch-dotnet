@@ -4,15 +4,18 @@
 - Vitor Dias dos Santos — RM: 565422
 - Enrico Delesporte — RM: 565760
 - Felipe Modesto — RM: 561810
+
 ---
 
 ## 🔗 Links do Projeto
 
 | Recurso | URL |
-|---|---|
-| **Repositório GitHub** | https://github.com/Solsticio-AirWatch/AirWatch-dotnet.git |
-| **Vídeo de Apresentação** | https://www.youtube.com/watch?v=Gum8MVhIeXY |
-| **Vídeo Pitch** |  https://youtu.be/VETzkKojZaA?si=BLVaojFXzyI3AQso
+|---------|-----|
+| Repositório GitHub | https://github.com/Solsticio-AirWatch/AirWatch-dotnet.git |
+| Vídeo de Apresentação | https://www.youtube.com/watch?v=Gum8MVhIeXY |
+| Vídeo Pitch | https://youtu.be/VETzkKojZaA?si=BLVaojFXzyI3AQso |
+
+---
 
 ## Domínio do Projeto
 
@@ -213,8 +216,11 @@ Country
 ### Ordem correta para cadastro
 
 **1. Country** — não depende de nenhuma outra entidade
+
 ```
 POST /api/countries
+```
+```json
 {
   "name": "Brasil",
   "isoCode": "BR",
@@ -223,27 +229,36 @@ POST /api/countries
 ```
 
 **2. City** — depende de Country
+
 ```
 POST /api/cities
+```
+```json
 {
   "countryId": "<id do country>",
   "name": "São Paulo",
   "state": "SP",
   "latitude": -23.5505,
   "longitude": -46.6333,
+  "altitudeM": 760.0,
+  "population": 12325232,
   "status": "A"
 }
 ```
 
 **3. User** — depende de City
+
 ```
 POST /api/users
+```
+```json
 {
   "cityId": "<id da city>",
   "name": "Carlos Oliveira",
   "email": "carlos@email.com",
-  "passwordHash": "senha123",
+  "password": "senha123",
   "role": "ADMIN",
+  "phone": "11999999999",
   "isActive": "Y",
   "notifyEmail": "Y",
   "notifyPush": "N"
@@ -251,24 +266,41 @@ POST /api/users
 ```
 
 **4. Sensor** — depende de City
+
 ```
 POST /api/sensors
+```
+```json
 {
   "cityId": "<id da city>",
   "name": "ESP32-SP-01",
   "type": "IOT",
+  "location": "Av. Paulista, 1000",
+  "latitude": -23.5613,
+  "longitude": -46.6558,
   "source": "IOT_DEVICE",
   "status": "ACTIVE"
 }
 ```
 
 **5. AirReading** — depende de City e Sensor
+
 ```
 POST /api/airreadings
+```
+```json
 {
   "cityId": "<id da city>",
   "sensorId": "<id do sensor>",
   "pm25": 42.7,
+  "pm10": 60.1,
+  "co2": 410.5,
+  "co": 0.8,
+  "no2": 35.2,
+  "so2": 12.1,
+  "o3": 80.3,
+  "temperature": 28.5,
+  "humidity": 65.0,
   "aqi": 120,
   "category": "BAD",
   "source": "IOT_DEVICE",
@@ -277,8 +309,11 @@ POST /api/airreadings
 ```
 
 **6. AlertConfig** — depende de User e City
+
 ```
 POST /api/alertconfigs
+```
+```json
 {
   "userId": "<id do user>",
   "cityId": "<id da city>",
@@ -291,13 +326,16 @@ POST /api/alertconfigs
 ```
 
 **7. AlertEvent** — depende de AlertConfig e AirReading
+
 ```
 POST /api/alertevents
+```
+```json
 {
   "alertConfigId": "<id da alertconfig>",
   "readingId": "<id da airreading>",
   "measuredValue": 42.7,
-  "message": "PM2.5 acima do limite",
+  "message": "PM2.5 acima do limite permitido",
   "status": "PENDING",
   "notificationSent": "N",
   "eventAt": "2026-05-31T10:00:00"
@@ -305,15 +343,20 @@ POST /api/alertevents
 ```
 
 **8. IntegrationLog** — depende de City (opcional)
+
 ```
 POST /api/integrationlogs
+```
+```json
 {
   "cityId": "<id da city>",
   "apiName": "OpenWeather",
   "endpoint": "/api/air_pollution",
   "httpMethod": "GET",
   "httpStatus": 200,
+  "recordsCount": 10,
   "result": "SUCCESS",
+  "errorMessage": null,
   "responseMs": 320
 }
 ```
@@ -342,7 +385,7 @@ dotnet ef --version
 ### 1. Clone o repositório
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/Solsticio-AirWatch/AirWatch-dotnet.git
 cd AirWatch-dotnet
 ```
 
