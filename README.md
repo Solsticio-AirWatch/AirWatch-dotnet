@@ -11,7 +11,7 @@
 | Recurso | URL |
 |---|---|
 | **Repositório GitHub** | https://github.com/Solsticio-AirWatch/AirWatch-dotnet.git |
-| **Vídeo de Apresentação** | |
+| **Vídeo de Apresentação** | https://www.youtube.com/watch?v=Gum8MVhIeXY |
 | **Vídeo Pitch** |  https://youtu.be/VETzkKojZaA?si=BLVaojFXzyI3AQso
 
 ## Domínio do Projeto
